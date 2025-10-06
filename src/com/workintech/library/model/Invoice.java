@@ -9,7 +9,7 @@ public class Invoice {
     private final int bookId;
     private final LocalDate date;
     private final double amount;
-    private final String type;
+    private final String type;  // CHARGE = TAHSILAT , REFUND = IADE ****
 
     public Invoice(int id, int memberId, int bookId, double amount, String type) {
         this.id = id;
