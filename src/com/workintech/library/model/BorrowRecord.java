@@ -1,6 +1,7 @@
 package com.workintech.library.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class BorrowRecord {
     private final int id;
@@ -58,6 +59,17 @@ public class BorrowRecord {
     public void setFee(double fee) {
         this.fee = fee; }
 
+
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(!(o instanceof BorrowRecord)) return false;
+        BorrowRecord borrowRecord = (BorrowRecord) o;
+        return this.id == borrowRecord.id;
+    }
+
+    public int hashCode(){
+      return Integer.hashCode(id);
+    }
 
     public String toString() {
         return String.format("BorrowRecord{id=%d, bookId=%d, memberId=%d, borrow=%s, due=%s, returned=%s, fee=%.2f}",

@@ -16,18 +16,43 @@ public abstract class Member {
         this.name = name;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getAddress() { return address; }
-    public void setAddress(String address) { this.address = address; }
-    public String getPhone() { return phone; }
-    public void setPhone(String phone) { this.phone = phone; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
 
-    public Set<Integer> getBorrowedBookIds() { return borrowedBookIds; }
+    public Set<Integer> getBorrowedBookIds() {
+        return borrowedBookIds;
+    }
 
-    public boolean canBorrowMore() { return borrowedBookIds.size() < maxBooksAllowed; }
+    public boolean canBorrowMore() {
+        return borrowedBookIds.size() < maxBooksAllowed;
+
+    }
 
     public void borrowBook(int bookId){
         if(!canBorrowMore()) throw new IllegalStateException("Borrow limit reached");
