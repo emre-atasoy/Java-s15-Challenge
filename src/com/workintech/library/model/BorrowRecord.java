@@ -3,6 +3,12 @@ package com.workintech.library.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
+
+
+//Bir kitabın kim tarafından, ne zaman ödünç alındığı ve geri getirildiği bilgisini tutar.
+//LibraryService tarafından yönetilir.
+// equals() ve hashCode() metodları id bazlı karşılaştırma için override edildi.
+
 public class BorrowRecord {
     private final int id;
     private final int bookId;
@@ -45,19 +51,23 @@ public class BorrowRecord {
         this.dueDate = dueDate; }
 
 
-    public LocalDate getReturnedDate() { return returnedDate;
+    public LocalDate getReturnedDate() {
+        return returnedDate;
     }
 
     public void setReturnedDate(LocalDate returnedDate) {
-        this.returnedDate = returnedDate; }
+        this.returnedDate = returnedDate;
+    }
 
 
     public double getFee() {
-        return fee; }
+        return fee;
+    }
 
 
     public void setFee(double fee) {
-        this.fee = fee; }
+        this.fee = fee;
+    }
 
 
     public boolean equals(Object o){

@@ -8,6 +8,10 @@ import com.workintech.library.util.IdGenerator;
 import java.io.Console;
 import java.util.Scanner;
 
+
+//Konsol üzerinden kullanıcı etkileşimini sağlar.
+// LibraryService sınıfını çağırarak tüm işlemleri yönlendirir.
+
 public class ConsoleApp {
 
     private final LibraryService service;

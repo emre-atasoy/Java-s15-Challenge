@@ -3,6 +3,13 @@ package com.workintech.library.model;
 import java.util.HashSet;
 import java.util.Set;
 
+
+//Metotlar: borrowBook(), returnBook(), canBorrowMore().
+
+//Bu sınıf abstract, çünkü somut bir üye tipi değildir; sadece temel davranışları içerir.
+
+//Student ve Faculty sınıfları bu sınıftan extends edilir.
+
 public abstract class Member {
     private final int id;
     private String name;

@@ -7,6 +7,12 @@ import com.workintech.library.model.Member;
 
 import java.util.*;
 
+//Tüm verilerin tutulduğu geçici bellek deposudur.
+
+//Map ve List yapıları ile kitap, üye, kayıt, fatura gibi verileri saklar.
+
+//LibraryService bu sınıfı kullanarak verilere ulaşır (composition ilişkisi).
+
 public class InMemoryRepository {
 
 

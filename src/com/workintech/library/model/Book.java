@@ -3,6 +3,15 @@ package com.workintech.library.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
+
+// borrowed alanı, kitabın şu anda ödünçte olup olmadığını takip eder.
+
+// Diğer sınıflarla composition ilişkisi vardır (Category içinde bulunur, Member tarafından alınabilir).
+
+
+
+
+
 public class Book {
 
     private final int id;

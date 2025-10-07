@@ -9,11 +9,18 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//Tüm iş kurallarının (business logic) bulunduğu katmandır.
+
+//InMemoryRepository’yi kullanarak veriler üzerinde işlem yapar.
+
+//OOP prensiplerinden composition, polymorphism ve encapsulation örnekleri içerir.
+
 public class LibraryService {
 
     private final InMemoryRepository repo;
 
     public LibraryService(InMemoryRepository repo){
+
         this.repo = repo;
     }
 
@@ -99,7 +106,7 @@ public class LibraryService {
         if(member == null) throw new IllegalArgumentException("Member not found");
         if(book == null) throw new IllegalArgumentException("Book not found");
         if(book.isBorrowed()) throw  new IllegalStateException("Book already borrowed");
-        if(!member.canBorrowMore()) new IllegalStateException("Member reached limit");
+        if(!member.canBorrowMore())throw  new  IllegalStateException("Member reached limit");
 
         book.setBorrowed(true);
         member.borrowBook(bookId);
